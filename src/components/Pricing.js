@@ -18,6 +18,7 @@ const Pricing = ({ data }) => (
               <li key={item} className="is-size-5">
                 {item}
               </li>
+
             ))}
           </ul>
         </section>
