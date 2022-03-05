@@ -30,12 +30,12 @@ IndexPageTemplate.propTypes = {
 };
 
 const CardData = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
       <IndexPageTemplate
-        title={post.frontmatter.title}
+        title={frontmatter.title}
       />
     </Layout>
   );
