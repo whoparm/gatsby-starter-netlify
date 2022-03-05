@@ -23,6 +23,7 @@ export const IndexPageTemplate = ({
           <div className="column is-6  card">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title2}
+
             </h1>
           </div>
         </div>
