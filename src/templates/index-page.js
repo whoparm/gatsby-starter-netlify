@@ -50,10 +50,8 @@ CardData.propTypes = {
 export default CardData;
 
 export const pageQuery = graphql`
-  query CardDataByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      html
+  query IndexPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
       }
