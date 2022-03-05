@@ -5,7 +5,8 @@ import Layout from "../components/Layout";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
-  title,
+  title1,
+  title2,
   helmet,
 }) => {
 
@@ -14,9 +15,14 @@ export const IndexPageTemplate = ({
       {helmet || ""}
       <div className="container content">
         <div className="columns">
-          <div className="column is-6 is-offset-1 card">
+          <div className="column is-6  card">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
+              {title1}
+            </h1>
+          </div>
+          <div className="column is-6  card">
+            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+              {title2}
             </h1>
           </div>
         </div>
@@ -26,7 +32,8 @@ export const IndexPageTemplate = ({
 };
 
 IndexPageTemplate.propTypes = {
-  title: PropTypes.string,
+  title1: PropTypes.string,
+  title2: PropTypes.string,
 };
 
 const CardData = ({ data }) => {
@@ -35,7 +42,8 @@ const CardData = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        title={frontmatter.title}
+        title1={frontmatter.title1}
+        title2={frontmatter.title2}
       />
     </Layout>
   );
@@ -53,7 +61,8 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
+        title1
+        title2
       }
     }
   }

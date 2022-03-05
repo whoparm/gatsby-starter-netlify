@@ -46,7 +46,8 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
-          - { label: Title, name: title, widget: string }
+          - { label: Title1, name: title1, widget: string }
+          - { label: Title2, name: title2, widget: string }
          
       - file: "src/pages/about/index.md"
         label: "About"
